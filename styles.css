@@ -1,0 +1,157 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Global Styling */
+:root {
+    --white: #FFF; /* Define your main color variable */
+    --black: #000; /* Define your secondary color variable */
+    --green: #5BC236; /* Define your tertiary color variable */
+    --box-shadow: gray; /* Define your box shadow variable */
+}
+
+/* Reset and Normalize */
+*,
+*::after,
+*::before { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+  
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+img, picture {
+    max-width: 100%;
+}
+
+article, aside, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    background-color: #eee;
+    overflow-x: hidden;
+}
+
+/* Navigation Styling */
+/* Step 1: Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 10px 80px; 
+    height: 30px;
+    position: sticky;
+}
+
+/* Step 2: Navigation Text Styles */
+nav p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: bold;
+    /*transition: ;*/
+}
+
+/* Step 3: Navigation Span Styles */
+nav p span {
+    color: var(--green);
+    /*transition: ;*/
+}
+
+/* Step 4: Navigation List Styles */
+nav ul {
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+    z-index: 100; */
+}
+
+/* Step 5: Navigation List Item Styles */
+nav ul li {
+    border: 2px solid rgba(0,0,0,0);
+    padding: 10px 15px;
+    border-radius: ;
+    cursor: pointer;
+    /*transition: ; */
+}
+
+/* Step 6: Navigation List Item Hover Styles */
+nav ul li:hover {
+    border: 2px solid var(--green);
+    background-color: var(--green);
+    border-radius: 10px;
+    transition: border 0.5s ease-in, background-color 0.5s ease;
+}
+
+/* Step 7: Navigation List Item Anchor Styles */
+nav ul li a {
+    color: var(--black);
+    font-weight: 500;
+    transition: color 0.5s ease-in font-weight 0.5s ease-in;
+}
+
+/* Step 8: Navigation List Item Anchor Hover Styles */
+nav ul li:hover > a {
+    color: var(--white);
+    font-weight: 800;
+    transition: color 0.5s ease-out font-weight 0.5s ease-out;
+}
+
+/* Step 9: Responsive Styles for Navigation */
+@media only screen and (max-width: 880px) {
+    nav {
+        margin: 10px 30px;
+    }
+}
+
+/* Step 10: Responsive Styles for Hidden Navigation on Small Screens */
+@media only screen and (max-width: 700px) {
+    nav ul {
+        display: none;
+    }
+}
+
+/* Slider Section Styling */
+
+/* Step 1: Section Styles */
+section {
+    position: relative;
+    background-color: var(--green);
+    height: 250px;
+}
+
+/* Step 2: Content Styles */
+.content {
+    position: absolute;
+    left: 50;
+    top: 20;
+    transform: inherit;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
