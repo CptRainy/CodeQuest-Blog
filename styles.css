@@ -1,0 +1,517 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Global Styling */
+:root {
+    --white: #FFF; /* Define your main color variable */
+    --black: #000; /* Define your secondary color variable */
+    --green: #5BC236; /* Define your tertiary color variable */
+    --box-shadow: gray; /* Define your box shadow variable */
+}
+
+/* Reset and Normalize */
+*,
+*::after,
+*::before { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+  
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+img, picture {
+    max-width: 100%;
+}
+
+article, aside, footer, header, nav, section {
+    display: block;
+}
+
+body {
+    background-color: #eee;
+    overflow-x: hidden;
+}
+
+/* Navigation Styling */
+/* Step 1: Navigation Bar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 20px 80px; 
+    height: auto;
+    position: sticky;
+}
+
+/* Step 2: Navigation Text Styles */
+nav p {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: bold;
+    transition: cursor 0.5s ease;
+}
+
+/* Step 3: Navigation Span Styles */
+nav p span {
+    color: var(--green);
+}
+
+/* Step 4: Navigation List Styles */
+nav ul {
+    display: flex;
+    gap: 1em;
+    font-size: 1.8rem;
+    z-index: 100;
+}
+
+/* Step 5: Navigation List Item Styles */
+nav ul li {
+    border: 2px solid rgba(0,0,0,0);
+    padding: 10px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, border 0.4s ease-out;
+
+}
+
+/* Step 6: Navigation List Item Hover Styles */
+nav ul li:hover {
+    border: 2px solid var(--green);
+    background-color: var(--green);
+    border-radius: 10px;
+    transition: border 0.4s ease-in, background-color 0.5s ease;
+}
+
+/* Step 7: Navigation List Item Anchor Styles */
+nav ul li a {
+    color: var(--black);
+    font-weight: 500;
+    transition: color 0.5s ease-in font-weight 0.5s ease-in;
+}
+
+/* Step 8: Navigation List Item Anchor Hover Styles */
+nav ul li:hover > a {
+    color: var(--white);
+    font-weight: 800;
+    transition: color 0.5s ease-out font-weight 0.5s ease-out;
+}
+
+/* Step 9: Responsive Styles for Navigation */
+@media only screen and (max-width: 880px) {
+    nav {
+        margin: 200ppx 30px;
+    }
+}
+
+/* Step 10: Responsive Styles for Hidden Navigation on Small Screens */
+@media only screen and (max-width: 700px) {
+    nav ul {
+        display: none;
+    }
+}
+
+/* Slider Section Styling */
+
+/* Step 1: Section Styles */
+section {
+    position: relative;
+    background-color: var(--green);
+    height: 250px;
+}
+
+/* Step 2: Content Styles */
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    width: 100%;
+}
+
+/* Step 3: Heading Styles */
+.content h2 {
+    font-size: 6rem;
+}
+
+/* Step 4: Paragraph Styles */
+.content p {
+    font-size: 1.8rem ;
+}
+
+/* Step 5: Responsive Styles */
+@media only screen and (max-width: 945px) {
+    .content h2 {
+        font-size: 4.5rem;
+    }
+    
+    .content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .content h2 {
+        font-size: 3.5rem;
+    }
+    
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .content h2 {
+        font-size: 3rem;
+    }
+    
+    .content p {
+        display: none;
+    }
+}
+
+/* Main Content Section Styling */
+
+/* Step 1: Main Content Container Styles */
+.main-content {
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    text-align: center;
+    margin: 2% 5%;
+    gap: 5rem;
+}
+
+@media only screen and (max-width: 1124px) {
+    .main-content {
+        margin: 1% 3%;
+    }
+}
+
+/* Step 2: Blog Section Styles */
+.blog {
+    flex: 3;
+} 
+
+/* Step 3: Sidebar Section Styles */
+.sidebar {
+    flex: 1;
+}
+
+/* Step 4: Post Styles */
+.post {
+    display: flex;
+    background-color: var(--white);
+    box-shadow: 5px 5px 8px var(--box-shadow);
+    margin-bottom: 45px;
+    position: relative;
+    min-height: 150px;
+}
+
+/* Step 5: Post Image Styles */
+.post-image {
+    min-height: 100%;
+    /*transition: transform 1s ease-out;*/
+    overflow: hidden;
+}
+
+/* Step 6: Hover Effect on Post Image */
+.post:hover .post-image img {
+    transform: scale(1.5);
+    transition: 1s ease-in;
+}
+
+/* Step 7: Post Image Inner Styles */
+.post-image img {
+    height: 100%;
+    transition: transform 0.5s ease-out;
+    object-fit: cover;
+}
+
+/* Step 8: Post Content Styles */
+.post-content {
+    padding: 50px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly
+}
+
+/* Step 9: Post Title Styles */
+.post-title {
+    color: var(--black);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Step 10: Post Info Styles */
+.post-info {
+    text-align: left;
+    padding: 10px 0px;
+    color: var(--box-shadow);
+    font-size: 1.5rem;
+}
+
+/* Step 11: Post Summary Styles */
+.post-summary {
+    line-height: 22px;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+/* Step 12: Responsive Styles */
+@media only screen and (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+}
+
+/* Step 13: Responsive Styles for Posts */
+@media only screen and (max-width: 500px) {
+    .main-content {
+        margin: 3rem 1rem;
+    }
+
+    .post {
+        flex-direction: column;
+    }
+}
+
+/* Sidebar Styling */
+
+/* Step 1: Sidebar Container Styles */
+.sidebar {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-evenly;
+}
+
+/* Step 2: Popular Posts Container Styles */
+.popular-posts-side {
+    margin: 5px;
+    width: 350px;
+}
+
+/* Step 3: Popular Posts Heading Styles */
+.popular-posts-side h2, .social-side h2 {
+    font-size: 1.5rem;
+    color: var(--box-shadow);
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+/* Step 4: Popular Post Styles */
+.popular-post {
+    position: relative;
+    background-color: var(--white);
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 8px var(--box-shadow);
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: left;
+    padding: 10px;
+    gap: 1rem;
+    transition: margin 0.5s ease;
+}
+
+/* Step 5: Popular Post Hover Styles */
+.popular-post:hover {
+    margin-left: 6px;
+    margin-right: 6px;
+    transition: margin 0.5s ease;
+}
+
+/* Step 6: Popular Post Image Styles */
+.popular-post-image {
+    width: 100px;
+    height: auto;
+}
+
+/* Step 7: Popular Post Image Hover Styles */
+.popular-post-image img:hover {
+    min-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+}
+
+/* Step 8: Popular Post Title Styles */
+.popular-post-title {
+    font-size: 1.5rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+/* Step 9: Popular Post Description Styles */
+.popular-post-desc {
+    font-size: 1rem;
+    color: var(--black);
+}
+
+/* Step 10: Responsive Styles for Popular Posts Container */
+@media only screen and (max-width: 500px) {
+    .popular-posts-side {
+        margin: 0;
+    }
+
+    .sidebar {
+        flex-direction: column;
+    }
+}
+
+/* Step 11: Social Side Container Styles */
+.social-side {
+    margin: 5px;
+    width: 350px;
+}
+
+/* Step 12: Social Side Box Styles */
+.social-side div {
+    display: flex;
+    padding: 15px;
+    box-shadow: 5px 10px 8px var(--box-shadow);
+    background-color: var(--white);
+    border-radius: 5px;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Step 13: Social Side Link Styles */
+.social-side div a {
+    max-width: 50px;
+    transition: filter 0.5s ease;
+}
+
+/* Step 14: Social Side Link Hover Styles */
+.social-side div a:hover img {
+    border-radius: 5px;
+    filter: blur(0.1rem);
+    transition: filter 0.5s ease;
+}
+
+@media only screen and (max-width: 992px) {
+  .sidebar {
+        flex-direction: column;
+    }
+
+    .popular-posts-side {
+        flex: 2;
+    }
+}
+
+
+/* Footer Styling */
+
+/* Step 1: Footer Container Styles */
+.container footer {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Step 2: Footer Boxes Container Styles */
+.container footer .footerBoxes {
+    display: flex;
+    flex-direction: row;
+    align-content: middle;
+    justify-content: space-evenly;
+    align-items: middle;
+    gap: 5rem;
+    padding: 30px 80px;
+}
+
+/* Step 3: Responsive Styles for Footer Boxes Container */
+@media only screen and (max-width: 1000px) {
+    .container footer .footerBoxes {
+        padding: 20px;
+    }
+}
+
+/* Step 4: Responsive Styles for Footer Boxes Container (Mobile) */
+@media only screen and (max-width: 600px) {
+    .container footer .footerBoxes {
+        flex-direction: column;
+    }
+}
+
+/* Step 5: Footer Box Styles */
+.container footer .footerBoxes .footerBox {
+    flex: content;
+    text-align: left;
+}
+
+/* Step 6: Footer Box Heading Styles */
+.container footer .footerBoxes .footerBox h3 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+/* Step 7: Footer Box Divider Styles */
+.container footer .footerBoxes .footerBox hr {
+    height: 1px;
+    width: auto;
+    background-color: var(--black);
+    border: var(--black);
+    margin-bottom: 2px; */
+}
+
+/* Step 8: Footer Box Text Styles */
+.container footer .footerBoxes .footerBox p {
+    font-size: 1.4rem;
+    color: var(--box-shadow);
+}
+
+/* Step 9: Footer Splitter Styles */
+.container footer .splitter {
+    height: 3px;
+    width: auto;
+    margin: 5px 30px;
+    background-color: var(--white);
+    border: var(--white);
+    margin-bottom: 5px;
+}
+
+/* Step 10: Copy-Right Text Styles */
+.copy-right {
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    opacity: 50%;
+    padding: 20px; 
+}
